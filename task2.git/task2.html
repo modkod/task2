@@ -62,6 +62,15 @@ body{width:100%;background:#DEDEDE; }
     .biaotou{background: #333333;color: #FFFFFF;font-size: 12px;text-align: left;}
     .biaowei{background: #CCCCCC;font-weight: 800}
 
+    .main5{width: 1200px;background:#ffffff;margin:22px auto;
+        box-shadow: 1px 1px 5px;border: 1px solid #bbbbbb;
+        padding:28px 23px;}
+    .main5 h3{border-left: solid 3px #ccc;padding-left:10px; line-height: 40px}
+    .main5 table{width:3000px;line-height: 40px }
+    .main5 .le {text-align: right;}
+    .main5 .tishi{font-size: 15px; color: darkgrey;}
+    #miaoshu{width:765px;height: 107px; }
+    .anniu{width: 1200px;height: 39px;background: dodgerblue;border-radius: 10px;font-size: 25px;color:white}
 </style>
 <body>
 <div id="wrap">
@@ -177,32 +186,88 @@ body{width:100%;background:#DEDEDE; }
 </div>
 
 <div class="main5">
-<h2>这里以后是侧栏</h2>
-<h2>侧栏的注册标题窗口</h2>
+<h3>这里以后是侧栏,侧栏的注册标题窗口</h3>
 
-<form action="">
-    <p>请输入邮箱地址:</p> <input type="text" name="text"><br>
-    <p>请输入准确的邮箱格式</p>
-    <p> 请输入密码：</p> <input type="password" name="pwd"> 请重新输入密码： <input type="password" name="pwd">
-    <p>密码是请输入6位；</p>
-    <span>性别：</span>
-    <input type="radio" name="sex" value="男">男
-    <input type="radio" name="sex" value="女">女
-    复选框
-    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
-    <input type="checkbox" name="vehicle" value="Car">I have a car
+    <form action="#" method="post">
+        <table>
+            <tfoot>
+            <tr>
+                <td  colspan="2">
+                    <input class="anniu" type="submit" value="确认提交">
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td class="le"><label for="email">请输入邮箱地址：</label></td>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="请输入邮箱" pattern="[\w!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[\w!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="tishi">邮箱地址请按要求格式输入</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="le"><label for="password">请输入密码：</label></td>
+                <td>
+                    <input type="password" name="password" id="password" placeholder="请输入密码" pattern="[A-z0-9]{6,16}">
+                </td>
+            </tr>
+            <tr>
+                <td class="le"><label for="tpassword">请重复输入密码：</label></td>
+                <td>
+                    <input type="password" name="tpassword" id="tpassword" placeholder="请再次输入密码">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="tishi">密码请为6-16位英文数字</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="le"><label for="man">性别：</label></td>
+                <td>
+                    <input type="radio" name="sex" id="man" value="man"><label for="man">男</label>
+                    <input type="radio" name="sex" id="woman" value="woman"><label for="woman">女</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="le"><label for="city">城市：</label></td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="北京">北京</option>
+                        <option value="广州">广州</option>
+                        <option value="上海">上海</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="le"><label for="yundong">爱好：</label></td>
+                <td>
+                    <input type="checkbox" name="hobby" value="yundong" id="yundong"><label for="yundong">运动</label>
+                    <input type="checkbox" name="hobby" value="yishu" id="yishu"><label for="yishu">艺术</label>
+                    <input type="checkbox" name="hobby" value="kexue" id="kexue"><label for="kexue">科学</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="le"><label for="miaoshu">个人描述：</label></td>
+                <td>
+                    <textarea name="miaoshu" id="miaoshu" placeholder="这是一个多行输入框，输入您的个人描述。"></textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
 
 
-    个人描述
-
-
-    按钮
-    <input type="button" value="Hello world!">
-</form>
 </div>
 </div>
 <div id="footer">
-
+<p>版权所有©</p>
 </div>
 
 </body>
